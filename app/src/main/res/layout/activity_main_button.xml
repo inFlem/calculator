@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@color/orange"
+            android:text="@string/c" />
+
+        <Button
+            android:id="@+id/changePosition"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_toEndOf="@id/clear"
+            android:background="@color/yellow"
+            android:text="@string/changePosition" />
+
+        <Button
+            android:id="@+id/percent"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_toEndOf="@id/changePosition"
+            android:background="@color/light_red"
+            android:text="@string/percent" />
+
+        <Button
+            android:id="@+id/seven"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/clear"
+            android:background="@color/very_light_blue"
+            android:text="@string/_7" />
+
+        <Button
+            android:id="@+id/eight"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/changePosition"
+            android:layout_toEndOf="@id/seven"
+            android:background="@color/very_blue"
+            android:text="@string/_8" />
+
+        <Button
+            android:id="@+id/nine"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/percent"
+            android:layout_toEndOf="@id/eight"
+            android:background="@color/very_light_blue"
+            android:text="@string/_9" />
+
+        <Button
+            android:id="@+id/division"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_toEndOf="@id/percent"
+            android:background="@color/turquoise"
+            android:text="@string/division"  />
+
+        <Button
+            android:id="@+id/four"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/seven"
+            android:background="@color/very_blue"
+            android:text="@string/_4" />
+
+        <Button
+            android:id="@+id/five"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/eight"
+            android:layout_toEndOf="@id/four"
+            android:background="@color/very_light_blue"
+            android:text="@string/_5" />
+
+        <Button
+            android:id="@+id/six"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/nine"
+            android:layout_toEndOf="@id/five"
+            android:background="@color/very_blue"
+            android:text="@string/_6" />
+
+        <Button
+            android:id="@+id/multiply"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/division"
+            android:layout_toEndOf="@id/nine"
+            android:background="@color/light_turquoise"
+            android:text="@string/multiply" />
+
+        <Button
+            android:id="@+id/one"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/four"
+            android:background="@color/very_light_blue"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/two"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/five"
+            android:layout_toEndOf="@id/one"
+            android:background="@color/very_blue"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/three"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/six"
+            android:layout_toEndOf="@id/two"
+            android:background="@color/very_light_blue"
+            android:text="@string/_3" />
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/multiply"
+            android:layout_toEndOf="@id/six"
+            android:background="@color/turquoise"
+            android:text="@string/minus" />
+
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/one"
+            android:background="@color/very_blue"
+            android:text="@string/_0" />
+
+        <Button
+            android:id="@+id/point"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/two"
+            android:layout_toEndOf="@id/zero"
+            android:background="@color/very_light_blue"
+            android:text="@string/point" />
+
+        <Button
+            android:id="@+id/equally"
+            style="@style/calc_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/three"
+            android:layout_toEndOf="@id/point"
+            android:background="@color/blue"
+            android:text="@string/equally" />
+
+        <Button
+            android:layout_below="@id/minus"
+            android:layout_toEndOf="@id/three"
+            android:id="@+id/plus"
+            android:layout_width="72dp"
+            android:layout_height="144dp"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/gray"
+            android:background="@color/shade_red"
+            android:text="@string/plus" />
+
+</RelativeLayout>
