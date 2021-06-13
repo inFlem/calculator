@@ -3,35 +3,34 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/clear"
             style="@style/calc_button"
             android:background="@color/orange"
             android:text="@string/c" />
 
-
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/changePosition"
             style="@style/calc_button"
             android:layout_toEndOf="@id/clear"
             android:background="@color/yellow"
             android:text="@string/changePosition" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/percent"
             style="@style/calc_button"
             android:layout_toEndOf="@id/changePosition"
             android:background="@color/light_red"
             android:text="@string/percent" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/seven"
             style="@style/calc_button"
             android:layout_below="@id/clear"
             android:background="@color/very_light_blue"
             android:text="@string/_7" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/eight"
             style="@style/calc_button"
             android:layout_below="@id/changePosition"
@@ -39,7 +38,7 @@
             android:background="@color/very_blue"
             android:text="@string/_8" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/nine"
             style="@style/calc_button"
             android:layout_below="@id/percent"
@@ -47,21 +46,21 @@
             android:background="@color/very_light_blue"
             android:text="@string/_9" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/division"
             style="@style/calc_button"
             android:layout_toEndOf="@id/percent"
             android:background="@color/turquoise"
             android:text="@string/division"  />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/four"
             style="@style/calc_button"
             android:layout_below="@id/seven"
             android:background="@color/very_blue"
             android:text="@string/_4" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/five"
             style="@style/calc_button"
             android:layout_below="@id/eight"
@@ -69,7 +68,7 @@
             android:background="@color/very_light_blue"
             android:text="@string/_5" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/six"
             style="@style/calc_button"
             android:layout_below="@id/nine"
@@ -77,7 +76,7 @@
             android:background="@color/very_blue"
             android:text="@string/_6" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:textAllCaps="false"
             android:id="@+id/multiply"
             style="@style/calc_button"
@@ -86,14 +85,14 @@
             android:background="@color/light_turquoise"
             android:text="@string/multiply" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/one"
             style="@style/calc_button"
             android:layout_below="@id/four"
             android:background="@color/very_light_blue"
             android:text="@string/_1" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/two"
             style="@style/calc_button"
             android:layout_below="@id/five"
@@ -101,7 +100,7 @@
             android:background="@color/very_blue"
             android:text="@string/_2" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/three"
             style="@style/calc_button"
             android:layout_below="@id/six"
@@ -109,7 +108,7 @@
             android:background="@color/very_light_blue"
             android:text="@string/_3" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/minus"
             style="@style/calc_button"
             android:layout_below="@id/multiply"
@@ -118,14 +117,14 @@
             android:text="@string/minus" />
 
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/zero"
             style="@style/calc_button"
             android:layout_below="@id/one"
             android:background="@color/very_blue"
             android:text="@string/_0" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/point"
             style="@style/calc_button"
             android:layout_below="@id/two"
@@ -133,7 +132,7 @@
             android:background="@color/very_light_blue"
             android:text="@string/point" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/equally"
             style="@style/calc_button"
             android:layout_below="@id/three"
@@ -141,7 +140,7 @@
             android:background="@color/blue"
             android:text="@string/equally" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:layout_below="@id/minus"
             android:layout_toEndOf="@id/three"
             android:id="@+id/plus"
