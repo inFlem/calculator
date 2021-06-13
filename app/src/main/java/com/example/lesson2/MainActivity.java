@@ -43,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 R.id.percent,
                 R.id.clear,
                 R.id.changePosition,
-                R.id.equally,
                 R.id.point,
         };
 
-        calculatorLogic = new CalculatorLogic();
+        calculatorLogic = new CalculatorLogic(this);
 
         View.OnClickListener clickButtonNumbers = v -> {
             calculatorLogic.reactionClickButtonNumbers(v.getId());
@@ -56,9 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
         View.OnClickListener clickButtonActions = v -> {
             calculatorLogic.reactionClickButtonActions(v.getId());
-            textResult.setText(calculatorLogic.getText());
+            textCount.setText(calculatorLogic.getText());
+
         };
 
+        findViewById(R.id.equally).setOnClickListener(v -> {
+            calculatorLogic.reactionClickButtonActions(v.getId());
+            textResult.setText(calculatorLogic.getResult());
+            calculatorLogic.clear();
+            textCount.setText("");
+        });
 
         for (int i : numbersID) {
             findViewById(i).setOnClickListener(clickButtonNumbers);

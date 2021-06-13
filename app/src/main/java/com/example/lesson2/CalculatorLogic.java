@@ -1,9 +1,15 @@
 package com.example.lesson2;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+
+
 public class CalculatorLogic {
 
     private int firstArg;
     private int secondArg;
+
+    private final Context context;
 
     private State state;
 
@@ -18,7 +24,8 @@ public class CalculatorLogic {
         resultState,
     }
 
-    public CalculatorLogic() {
+    public CalculatorLogic(Context context) {
+        this.context = context;
         state = State.firstState;
     }
 
@@ -37,35 +44,35 @@ public class CalculatorLogic {
         switch (buttonID){
             case R.id.zero:
                 if(stock.length() != 0){
-                    stock.append("0");
+                    stock.append(context.getString(R.string._0));
                 }
                 break;
             case R.id.one:
-                stock.append("1");
+                stock.append(context.getString(R.string._1)); // такое себе
                 break;
             case R.id.two:
-                stock.append("2");
+                stock.append(context.getString(R.string._2));
                 break;
             case R.id.three:
-                stock.append("3");
+                stock.append(context.getString(R.string._3));
                 break;
             case R.id.four:
-                stock.append("4");
+                stock.append(context.getString(R.string._4));
                 break;
             case R.id.five:
-                stock.append("5");
+                stock.append(context.getString(R.string._5));
                 break;
             case R.id.six:
-                stock.append("6");
+                stock.append(context.getString(R.string._6));
                 break;
             case R.id.seven:
-                stock.append("7");
+                stock.append(context.getString(R.string._7));
                 break;
             case R.id.eight:
-                stock.append("8");
+                stock.append(context.getString(R.string._8));
                 break;
             case R.id.nine:
-                stock.append("9");
+                stock.append(context.getString(R.string._9));
                 break;
         }
     }
@@ -115,15 +122,11 @@ public class CalculatorLogic {
                         .append(' ')
                         .append(stock)
                         .toString();
-            case resultState:
-                return stockText.append(firstArg).append(' ')
-                        .append(getOperationChar())
-                        .append(' ')
-                        .append(secondArg)
-                        .append(" = ")
-                        .append(stock.toString())
-                        .toString();
         }
+    }
+
+    public String getResult(){
+        return stock.toString();
     }
 
     private char getOperationChar() {
