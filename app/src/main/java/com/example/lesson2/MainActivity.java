@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             calculatorLogic.reactionClickButtonActions(v.getId());
             textResult.setText(calculatorLogic.getResult());
             calculatorLogic.clear();
-            textCount.setText("");
         });
 
         for (int i : numbersID) {
