@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size">30sp</dimen>
+    <dimen name="textSize">30sp</dimen>
+    <dimen name="textView_textSize">35sp</dimen>
+
+    <dimen name="button_size">72dp</dimen>
+    <dimen name="button_size_vertical">144dp</dimen>
+
+    <dimen name="background_marginStartEnd">5dp</dimen>
+    <dimen name="background_marginTop">100dp</dimen>
+    <dimen name="background_paddingBottom">20dp</dimen>
+
+    <dimen name="linearLayout_layout_width">288dp</dimen>
+    <dimen name="linearLayout_layout_height">100dp</dimen>
+    <dimen name="linearLayout_marginStart">55dp</dimen>
+    <dimen name="linearLayout_marginTop">50dp</dimen>
+
+    <dimen name="textView_marginTopEnd">10dp</dimen>
+
+    <dimen name="include_marginStart">56dp</dimen>
+    <dimen name="include_marginTop">50dp</dimen>
+    <dimen name="include_marginBottom">30dp</dimen>
 </resources>
