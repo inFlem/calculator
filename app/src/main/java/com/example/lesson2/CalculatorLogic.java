@@ -1,12 +1,15 @@
 package com.example.lesson2;
 
-public class CalculatorLogic {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class CalculatorLogic implements Parcelable {
 
     private int firstArg;
 
     private State state;
 
-    private int actionUserSelected;
+//    private int actionUserSelected;
 
     private Operation operation = null;
 
@@ -21,6 +24,36 @@ public class CalculatorLogic {
 
     public CalculatorLogic() {
         state = State.firstState;
+    }
+
+    protected CalculatorLogic(Parcel in) {
+        firstArg = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(firstArg);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<CalculatorLogic> CREATOR = new Creator<CalculatorLogic>() {
+        @Override
+        public CalculatorLogic createFromParcel(Parcel in) {
+            return new CalculatorLogic(in);
+        }
+
+        @Override
+        public CalculatorLogic[] newArray(int size) {
+            return new CalculatorLogic[size];
+        }
+    };
+
+    protected Operation getOperation(){
+        return operation;
     }
 
     public void reactionClickButtonNumbers(int number){
@@ -123,8 +156,6 @@ public class CalculatorLogic {
     public String getResult(){
         return stock.toString();
     }
-
-
 
     public void clear() {
         state = State.firstState;

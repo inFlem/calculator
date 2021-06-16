@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView textResult;
     private TextView textCount;
 
-    private CalculatorLogic calculatorLogic;
+    private final static String COUNTERS = "counters";
 
+    private CalculatorLogic calculatorLogic;
 
     private final int[] numbersID = new int[]{
             R.id.zero,
@@ -133,6 +135,24 @@ public class MainActivity extends AppCompatActivity {
             default:
                 throw new IllegalArgumentException("Unknown symbol");
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putParcelable(COUNTERS, calculatorLogic);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        calculatorLogic = savedInstanceState.getParcelable(COUNTERS);
+        PrintResult();
+    }
+
+    private void PrintResult(){
+        if (calculatorLogic.getOperation() == Operation.EQUALLY) textResult.setText(calculatorLogic.getResult());
+        else textCount.setText(calculatorLogic.getText());
     }
 }
 
