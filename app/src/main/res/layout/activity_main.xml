@@ -11,6 +11,17 @@
     android:layout_marginTop="@dimen/background_marginTop"
     android:paddingBottom="@dimen/background_paddingBottom">
 
+    <RadioButton
+        android:id="@+id/SWAP"
+        android:layout_marginStart="263dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@color/yellow"
+        android:text="@string/swap"
+        android:textColor="@color/gray" >
+    </RadioButton>
+
     <LinearLayout
         android:layout_width="@dimen/linearLayout_layout_width"
         android:layout_height="@dimen/linearLayout_layout_height"
