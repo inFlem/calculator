@@ -9,8 +9,6 @@ public class CalculatorLogic implements Parcelable {
 
     private State state;
 
-//    private int actionUserSelected;
-
     private Operation operation = null;
 
     StringBuilder stock = new StringBuilder();
@@ -106,12 +104,11 @@ public class CalculatorLogic implements Parcelable {
 
     public void reactionClickButtonActions(Operation operation) {
 
-        this.operation = operation;
         if (operation == Operation.EQUALLY && state == State.secondState && stock.length() > 0) {
             int secondArg = Integer.parseInt(stock.toString());
             state = State.resultState;
             stock.setLength(0);
-            switch (operation) {
+            switch (this.operation) {
                 case PLUS:
                     stock.append(firstArg + secondArg);
                     break;
@@ -131,8 +128,9 @@ public class CalculatorLogic implements Parcelable {
         } else if (stock.length() > 0 && state == State.firstState && operation != Operation.EQUALLY) {
             firstArg = Integer.parseInt(stock.toString());
             state = State.operationSelected;
-           // actionUserSelected = actionsID;
+
         }
+        this.operation = operation;
     }
 
     public String getText() {
@@ -142,11 +140,11 @@ public class CalculatorLogic implements Parcelable {
                 return stock.toString();
             case operationSelected:
                 return stockText.append(firstArg).append(' ')
-                        .append(operation.values())
+                        .append(operation.toString())
                         .toString();
             case secondState:
                 return stockText.append(firstArg).append(' ')
-                        .append(operation.values())
+                        .append(operation.toString())
                         .append(' ')
                         .append(stock)
                         .toString();
@@ -161,5 +159,4 @@ public class CalculatorLogic implements Parcelable {
         state = State.firstState;
         stock.setLength(0);
     }
-
 }

@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("NonConstantResourceId")
-    int getNumbersByViewId(int number) {
+    int getNumbersByViewId(@IdRes int number) {
         switch (number) {
             case R.id.zero:
                 return 0;
@@ -147,11 +147,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         calculatorLogic = savedInstanceState.getParcelable(COUNTERS);
-        PrintResult();
+        printResult();
     }
 
-    private void PrintResult(){
-        if (calculatorLogic.getOperation() == Operation.EQUALLY) textResult.setText(calculatorLogic.getResult());
+    private void printResult(){
+        if (calculatorLogic.getOperation() == Operation.EQUALLY){
+            textResult.setText(calculatorLogic.getResult());
+        }
         else textCount.setText(calculatorLogic.getText());
     }
 }
